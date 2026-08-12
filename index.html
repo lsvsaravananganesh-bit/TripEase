@@ -1,1 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripEase - Smart Travel Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
+
+<header class="navbar">
+    <div class="logo">Trip<span>Ease</span></div>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="planner.html">Plan Trip</a>
+        <a href="accommodation.html">Stay</a>
+        <a href="budget.html">Budget</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="tracking.html">Track</a>
+    </nav>
+
+    <button class="login-btn" onclick="alert('Login module can be added in Phase 2')">
+        Login
+    </button>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✨ Smart Travel Planning
+        </div>
+
+        <h1>
+            Plan Your Entire
+            <span>Journey</span>
+            in One Place.
+        </h1>
+
+        <p>
+            Plan transportation, accommodation, budget and itinerary
+            with TripEase — your smart travel companion.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="planner.html" class="primary-btn">
+                ✨ Plan My Trip
+            </a>
+
+            <a href="#features" class="secondary-btn">
+                Explore Features
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="card-header">
+            <span>Upcoming Trip</span>
+            <span class="status">● Planned</span>
+        </div>
+
+        <h3>Hyderabad → Tirupati</h3>
+
+        <div class="trip-info">
+            <div>
+                <small>DATE</small>
+                <strong>20 Aug</strong>
+            </div>
+
+            <div>
+                <small>TRAVELERS</small>
+                <strong>4 People</strong>
+            </div>
+
+            <div>
+                <small>BUDGET</small>
+                <strong>₹15,000</strong>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <p class="small-text">
+            Your trip is within the recommended budget.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="quick-planner">
+
+    <h2>Where do you want to go?</h2>
+
+    <div class="quick-form">
+
+        <div class="input-group">
+            <label>From</label>
+            <input type="text" id="homeFrom" placeholder="Hyderabad">
+        </div>
+
+        <div class="input-group">
+            <label>To</label>
+            <input type="text" id="homeTo" placeholder="Tirupati">
+        </div>
+
+        <div class="input-group">
+            <label>Travelers</label>
+            <input type="number" id="homeTravelers" value="2" min="1">
+        </div>
+
+        <button onclick="quickPlan()">
+            Plan Trip →
+        </button>
+
+    </div>
+
+</section>
+
+
+<section id="features" class="section">
+
+    <div class="section-heading">
+        <span>EVERYTHING YOU NEED</span>
+        <h2>One Platform. Complete Journey.</h2>
+        <p>
+            From planning your route to tracking your journey,
+            TripEase keeps everything organized.
+        </p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Smart Trip Planner</h3>
+            <p>
+                Create a personalized trip according to your
+                destination, duration and preferences.
+            </p>
+            <a href="planner.html">Plan a trip →</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🚆</div>
+            <h3>Transportation</h3>
+            <p>
+                Compare train, bus and flight options based
+                on cost and travel time.
+            </p>
+            <a href="trip.html">Explore options →</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🏨</div>
+            <h3>Nearby Stay</h3>
+            <p>
+                Find accommodation near temples and
+                tourist destinations.
+            </p>
+            <a href="accommodation.html">Find stays →</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Budget Planner</h3>
+            <p>
+                Estimate transportation, food, accommodation
+                and other travel expenses.
+            </p>
+            <a href="budget.html">Calculate →</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Smart Itinerary</h3>
+            <p>
+                Organize your entire journey with a
+                day-by-day schedule.
+            </p>
+            <a href="itinerary.html">View itinerary →</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📍</div>
+            <h3>Live Tracking</h3>
+            <p>
+                Track your journey progress and estimated
+                arrival time.
+            </p>
+            <a href="tracking.html">Track trip →</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="how-section">
+
+    <div class="section-heading">
+        <span>HOW IT WORKS</span>
+        <h2>Plan. Travel. Enjoy.</h2>
+    </div>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h3>Enter Your Trip</h3>
+            <p>
+                Tell us where you're going, when you're travelling,
+                your group size and your budget.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h3>Get Your Plan</h3>
+            <p>
+                TripEase generates transportation, accommodation,
+                budget and itinerary suggestions.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h3>Enjoy Your Journey</h3>
+            <p>
+                Follow your itinerary, manage expenses and
+                track your journey.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <h2>Ready for your next journey?</h2>
+
+    <p>
+        Create your personalized travel plan in seconds.
+    </p>
+
+    <a href="planner.html" class="primary-btn">
+        Start Planning →
+    </a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <div class="logo">Trip<span>Ease</span></div>
+            <p>
+                Smart travel planning made simple.
+            </p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <a href="planner.html">Plan Trip</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="budget.html">Budget</a>
+        </div>
+
+        <div>
+            <h4>Journey</h4>
+            <a href="itinerary.html">Itinerary</a>
+            <a href="tracking.html">Live Tracking</a>
+            <a href="trip.html">Trip Details</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 TripEase. Mini Project.
+    </div>
+
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
