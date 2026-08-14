@@ -1,303 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripEase - Smart Travel Planner</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TripEase — plan routes, compare transport, find stays, manage budgets and build itineraries in one place.">
+<title>TripEase — Smart Travel Planning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <header class="navbar">
-    <div class="logo">Trip<span>Ease</span></div>
-
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="planner.html">Plan Trip</a>
-        <a href="accommodation.html">Stay</a>
-        <a href="budget.html">Budget</a>
-        <a href="itinerary.html">Itinerary</a>
-        <a href="tracking.html">Track</a>
-    </nav>
-
-    <button class="login-btn" onclick="alert('Login module can be added in Phase 2')">
-        Login
-    </button>
+  <a class="brand" href="index.html"><span class="brand-mark">✈</span><span>Trip<span class="brand-accent">Ease</span></span></a>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <nav class="nav-links">
+    <a class="active" href="index.html">Home</a><a href="planner.html">Plan Trip</a><a href="trip.html">Transport</a><a href="accommodation.html">Stay</a><a href="budget.html">Budget</a><a href="itinerary.html">Itinerary</a>
+  </nav>
+  <button class="login-btn" id="loginBtn">Sign in</button>
 </header>
-
 <main>
-
 <section class="hero">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            ✨ Smart Travel Planning
-        </div>
-
-        <h1>
-            Plan Your Entire
-            <span>Journey</span>
-            in One Place.
-        </h1>
-
-        <p>
-            Plan transportation, accommodation, budget and itinerary
-            with TripEase — your smart travel companion.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="planner.html" class="primary-btn">
-                ✨ Plan My Trip
-            </a>
-
-            <a href="#features" class="secondary-btn">
-                Explore Features
-            </a>
-        </div>
-
+  <div class="hero-copy">
+    <div class="eyebrow">✦ YOUR SMART TRAVEL COMPANION</div>
+    <h1>Every journey.<br><span>One simple plan.</span></h1>
+    <p>Compare transport, discover stays, control your budget and build a day-by-day itinerary — without jumping between apps.</p>
+    <div class="hero-actions"><a class="btn primary" href="planner.html">Start planning <span>→</span></a><a class="text-btn" href="#features">Explore TripEase ↓</a></div>
+    <div class="trust-row"><span>✓ Free to plan</span><span>✓ Mobile friendly</span><span>✓ All-in-one</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="route-card glass-card">
+      <div class="route-top"><span>YOUR NEXT ADVENTURE</span><span class="live-dot">● Ready</span></div>
+      <div class="route"><div><small>FROM</small><strong>Hyderabad</strong></div><div class="route-line"><span>✈</span><i></i><i></i><i></i></div><div class="align-right"><small>TO</small><strong>Tirupati</strong></div></div>
+      <div class="route-meta"><span>📅 20 Aug 2026</span><span>👥 4 travelers</span><span>₹15,000 budget</span></div>
+      <div class="budget-progress"><div style="width:68%"></div></div><p class="muted">Estimated trip cost <b>₹10,200</b> · comfortably within budget</p>
     </div>
-
-    <div class="hero-card">
-
-        <div class="card-header">
-            <span>Upcoming Trip</span>
-            <span class="status">● Planned</span>
-        </div>
-
-        <h3>Hyderabad → Tirupati</h3>
-
-        <div class="trip-info">
-            <div>
-                <small>DATE</small>
-                <strong>20 Aug</strong>
-            </div>
-
-            <div>
-                <small>TRAVELERS</small>
-                <strong>4 People</strong>
-            </div>
-
-            <div>
-                <small>BUDGET</small>
-                <strong>₹15,000</strong>
-            </div>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-bar"></div>
-        </div>
-
-        <p class="small-text">
-            Your trip is within the recommended budget.
-        </p>
-
-    </div>
-
+    <div class="floating-card transport-float"><span class="float-icon">🚆</span><div><b>Best transport</b><small>Train · 7h 20m</small></div><strong>₹650</strong></div>
+    <div class="floating-card save-float"><span>💡</span><div><b>Smart suggestion</b><small>Save ₹1,250 with this plan</small></div></div>
+  </div>
 </section>
-
-
-<section class="quick-planner">
-
-    <h2>Where do you want to go?</h2>
-
-    <div class="quick-form">
-
-        <div class="input-group">
-            <label>From</label>
-            <input type="text" id="homeFrom" placeholder="Hyderabad">
-        </div>
-
-        <div class="input-group">
-            <label>To</label>
-            <input type="text" id="homeTo" placeholder="Tirupati">
-        </div>
-
-        <div class="input-group">
-            <label>Travelers</label>
-            <input type="number" id="homeTravelers" value="2" min="1">
-        </div>
-
-        <button onclick="quickPlan()">
-            Plan Trip →
-        </button>
-
-    </div>
-
+<section class="search-panel">
+  <div class="search-heading"><span class="mini-icon">⌕</span><div><h2>Where are you going?</h2><p>Build a trip in seconds</p></div></div>
+  <form id="quickPlan" class="search-grid">
+    <label>From<input id="homeFrom" required placeholder="Hyderabad"></label>
+    <label>To<input id="homeTo" required placeholder="Tirupati"></label>
+    <label>Departure<input id="homeDate" type="date"></label>
+    <label>Travelers<input id="homeTravelers" type="number" min="1" value="2"></label>
+    <button class="btn primary" type="submit">Plan my trip →</button>
+  </form>
 </section>
-
-
 <section id="features" class="section">
-
-    <div class="section-heading">
-        <span>EVERYTHING YOU NEED</span>
-        <h2>One Platform. Complete Journey.</h2>
-        <p>
-            From planning your route to tracking your journey,
-            TripEase keeps everything organized.
-        </p>
-    </div>
-
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            <div class="feature-icon">🗺️</div>
-            <h3>Smart Trip Planner</h3>
-            <p>
-                Create a personalized trip according to your
-                destination, duration and preferences.
-            </p>
-            <a href="planner.html">Plan a trip →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">🚆</div>
-            <h3>Transportation</h3>
-            <p>
-                Compare train, bus and flight options based
-                on cost and travel time.
-            </p>
-            <a href="trip.html">Explore options →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">🏨</div>
-            <h3>Nearby Stay</h3>
-            <p>
-                Find accommodation near temples and
-                tourist destinations.
-            </p>
-            <a href="accommodation.html">Find stays →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3>Budget Planner</h3>
-            <p>
-                Estimate transportation, food, accommodation
-                and other travel expenses.
-            </p>
-            <a href="budget.html">Calculate →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">📅</div>
-            <h3>Smart Itinerary</h3>
-            <p>
-                Organize your entire journey with a
-                day-by-day schedule.
-            </p>
-            <a href="itinerary.html">View itinerary →</a>
-        </div>
-
-        <div class="feature-card">
-            <div class="feature-icon">📍</div>
-            <h3>Live Tracking</h3>
-            <p>
-                Track your journey progress and estimated
-                arrival time.
-            </p>
-            <a href="tracking.html">Track trip →</a>
-        </div>
-
-    </div>
-
+  <div class="section-heading"><div class="eyebrow">ONE PLATFORM · COMPLETE JOURNEY</div><h2>Everything your trip needs.</h2><p>From the first search to the final stop, TripEase keeps the details connected.</p></div>
+  <div class="feature-grid">
+    <a class="feature-card featured" href="planner.html"><span class="feature-icon">🗺️</span><div><h3>Smart Trip Planner</h3><p>Enter your route, dates, travelers and preferences to create a practical trip plan.</p><b>Build a plan →</b></div></a>
+    <a class="feature-card" href="trip.html"><span class="feature-icon">🚆</span><h3>Compare Transport</h3><p>See train, bus and flight choices side-by-side by price, duration and comfort.</p><b>Explore routes →</b></a>
+    <a class="feature-card" href="accommodation.html"><span class="feature-icon">🏨</span><h3>Find a Stay</h3><p>Discover hotels and stays near the places you actually want to visit.</p><b>Find stays →</b></a>
+    <a class="feature-card" href="budget.html"><span class="feature-icon">💰</span><h3>Budget Manager</h3><p>Set a target budget and divide it across transport, stay, food and activities.</p><b>Manage budget →</b></a>
+    <a class="feature-card" href="itinerary.html"><span class="feature-icon">📅</span><h3>Day-by-Day Itinerary</h3><p>Turn destinations into a clean schedule with time blocks and travel gaps.</p><b>View itinerary →</b></a>
+    <a class="feature-card"><span class="feature-icon">🤖</span><h3>TripEase AI</h3><p>Get smart suggestions for routes, places and budget-friendly choices.</p><b>Coming soon</b></a>
+  </div>
 </section>
-
-
-<section class="how-section">
-
-    <div class="section-heading">
-        <span>HOW IT WORKS</span>
-        <h2>Plan. Travel. Enjoy.</h2>
-    </div>
-
-    <div class="steps">
-
-        <div class="step">
-            <div class="step-number">01</div>
-            <h3>Enter Your Trip</h3>
-            <p>
-                Tell us where you're going, when you're travelling,
-                your group size and your budget.
-            </p>
-        </div>
-
-        <div class="step">
-            <div class="step-number">02</div>
-            <h3>Get Your Plan</h3>
-            <p>
-                TripEase generates transportation, accommodation,
-                budget and itinerary suggestions.
-            </p>
-        </div>
-
-        <div class="step">
-            <div class="step-number">03</div>
-            <h3>Enjoy Your Journey</h3>
-            <p>
-                Follow your itinerary, manage expenses and
-                track your journey.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="cta">
-
-    <h2>Ready for your next journey?</h2>
-
-    <p>
-        Create your personalized travel plan in seconds.
-    </p>
-
-    <a href="planner.html" class="primary-btn">
-        Start Planning →
-    </a>
-
-</section>
-
+<section class="stats-section"><div><strong>01</strong><span>Trip dashboard</span></div><div><strong>04</strong><span>Core planning tools</span></div><div><strong>∞</strong><span>Ways to customize</span></div><div><strong>24/7</strong><span>Plan from anywhere</span></div></section>
+<section class="how section"><div class="section-heading"><div class="eyebrow">HOW IT WORKS</div><h2>Plan less. Experience more.</h2></div><div class="steps"><article><span>01</span><h3>Tell us your trip</h3><p>Choose your origin, destination, dates, travelers and budget.</p></article><article><span>02</span><h3>Compare & customize</h3><p>Pick transport and stay options, then adjust your expenses.</p></article><article><span>03</span><h3>Travel with confidence</h3><p>Keep your itinerary, budget and trip details together.</p></article></div></section>
+<section class="cta"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Your next trip starts here.</h2><p>Turn a destination idea into an organized travel plan.</p></div><a class="btn light" href="planner.html">Create my trip →</a></section>
 </main>
-
-
-<footer>
-
-    <div class="footer-content">
-
-        <div>
-            <div class="logo">Trip<span>Ease</span></div>
-            <p>
-                Smart travel planning made simple.
-            </p>
-        </div>
-
-        <div>
-            <h4>Explore</h4>
-            <a href="planner.html">Plan Trip</a>
-            <a href="accommodation.html">Accommodation</a>
-            <a href="budget.html">Budget</a>
-        </div>
-
-        <div>
-            <h4>Journey</h4>
-            <a href="itinerary.html">Itinerary</a>
-            <a href="tracking.html">Live Tracking</a>
-            <a href="trip.html">Trip Details</a>
-        </div>
-
-    </div>
-
-    <div class="copyright">
-        © 2026 TripEase. Mini Project.
-    </div>
-
-</footer>
-
+<footer><div class="footer-main"><div><a class="brand" href="index.html"><span class="brand-mark">✈</span><span>Trip<span class="brand-accent">Ease</span></span></a><p>Smart travel planning, made simple.</p></div><div><h4>Plan</h4><a href="planner.html">Trip Planner</a><a href="trip.html">Transport</a><a href="accommodation.html">Accommodation</a></div><div><h4>Manage</h4><a href="budget.html">Budget</a><a href="itinerary.html">Itinerary</a></div></div><div class="footer-bottom">© 2026 TripEase · Smart Travel Planning & Budget Management</div></footer>
+<div class="modal hidden" id="loginModal"><div class="modal-box"><button class="modal-close" id="closeModal">×</button><div class="eyebrow">WELCOME BACK</div><h2>Sign in to TripEase</h2><p>Save trips and keep your plans in one place.</p><input placeholder="Email address" type="email"><input placeholder="Password" type="password"><button class="btn primary full" id="demoLogin">Continue</button><small>Demo mode — authentication can be connected later.</small></div></div>
 <script src="js/main.js"></script>
-
 </body>
 </html>
